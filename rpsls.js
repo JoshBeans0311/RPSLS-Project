@@ -17,32 +17,67 @@
 
 // classes - player, computer, weapon, game
 
-class Game (
+class Game {
     constructor() {
+        this.playerOne = new Player("Test");
 
-    }
-)
         
-class Player (
-    constructor() {
-        this.score
-    }
-)
-
-class Computer (
-    constructor() {
 
     }
-)
 
-class Weapon (
-    constructor() {
+    RunGame(){
+        this.DisplayWelcome();
+        this.playersThrowGestures();
+        
 
     }
-)
+    DisplayWelcome(){
+
+    }
+    CompareGestures(){
+
+    }
+    playersThrowGestures(){
+
+    }
+}
+        
+class Player {
+    constructor(name) {
+        this.score = 0;
+        this.name = name;
+        this.weaponSet = [];
+
+        this.weaponSet.push(new Weapon("Rock"));
+        this.weaponSet.push(new Weapon("Paper"));
+        this.weaponSet.push(new Weapon("Scissors"));
+        this.weaponSet.push(new Weapon("Lizard"));
+        this.weaponSet.push(new Weapon("Spock"));
+    }
+}
+class Human{
+    constructor() {
+        this.score = 0;
+    }
+}
+class Computer {
+    constructor() {
+        this.score = 0;
+    }
+}
+
+class Weapon {
+    constructor(weaponName) {
+        this.weaponName = weaponName;
+    }
+}
 
 
+let game = new Game();
 
+console.log('game', game);
+
+console.log(game.weaponSet[0].weaponName);
 
 
 
