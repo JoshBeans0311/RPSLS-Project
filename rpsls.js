@@ -17,6 +17,14 @@
 
 // classes - player, computer, weapon, game
 
+
+
+
+//What if you use weapon array as if player 1 calls [0] and playeer 2 calls [3] player2 ++ points 
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+
+
 class Game {
     constructor() {
         this.playerOne = new Player("Test");
@@ -25,21 +33,33 @@ class Game {
 
     }
 
-    RunGame(){
-        this.DisplayWelcome();
+    runGame(){   /////main method
+        this.displayWelcome();
+        this.compareGestures();
         this.playersThrowGestures();
-        
+
 
     }
-    DisplayWelcome(){
+    displayWelcome(){
+        console.log("Welcome to Rock, Paper, Scissors, Lizard, Spock!");
 
     }
-    CompareGestures(){
-
+    compareGestures(){
+        console.log("Each player will have the option of throwing the following gestures: Rock, Paper, Scissors, Lizard or Spock.");
+        console.log("Whichever player wins three rounds first wins the game.");
     }
     playersThrowGestures(){
-
+        this.chooseGesture();
     }
+    chooseGesture(){
+        let gestureChoice = ""
+
+        gestureChoice = prompt("Please chose a gesture to throw.");
+
+        
+    }
+
+
 }
         
 class Player {
@@ -73,11 +93,14 @@ class Weapon {
 }
 
 
+
 let game = new Game();
+game.runGame();
 
-console.log('game', game);
 
-console.log(game.weaponSet[0].weaponName);
+// console.log('game', game);
+
+// console.log(player.weaponSet[0].weaponName);
 
 
 
