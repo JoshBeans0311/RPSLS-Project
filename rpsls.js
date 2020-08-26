@@ -70,16 +70,16 @@ class Player extends Game{
     }
     
     chooseGesture(){
-        let gestureChoiceOne = ""
+        let gestureChoiceOne = "";
 
         gestureChoiceOne = prompt("Player one, please chose a gesture to throw out of Rock, Paper, Scissors, Lizard or Spock.");
 
 
-        let gestureChoiceTwo = ""
+        let gestureChoiceTwo = "";
 
         gestureChoiceTwo = prompt("Player two, please chose a gesture to throw out of Rock, Paper, Scissors, Lizard or Spock.");
         
-    }
+    
 
             if (gestureChoiceOne === "Scissors" && gestureChoiceTwo === "Rock");
             console.log("Player Two Wins!! Rock Crushes Scissors!!");
@@ -142,6 +142,7 @@ class Player extends Game{
 
             if (gestureChoiceOne === "Spock" && gestureChoiceTwo === "Rock");
             console.log("Player One Wins!! Spock Vaporizes Rock!!");
+    }
 }
 
 
